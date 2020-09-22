@@ -9,9 +9,10 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ToDoComponent } from './to-do/to-do.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignUpComponent, WelcomeComponent],
+  declarations: [AppComponent, LoginComponent, SignUpComponent, WelcomeComponent, ToDoComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
