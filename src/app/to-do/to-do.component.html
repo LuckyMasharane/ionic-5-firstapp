@@ -16,16 +16,21 @@
 
   <ion-grid fixed>
     <ion-row>
-      <ion-col size="12" size-md="6" *ngFor="let todo of todo">
+      <ion-col size="6" size-md="6" *ngFor="let todo of todo">
         <ion-card class="speaker-card">
           <ion-card-header>
               <ion-label>
                 <h2>{{todo.content}}</h2>
                 <p>{{todo.status}}</p>
+                <p class="prio">{{todo.priority}}</p>
               </ion-label>
-            
           </ion-card-header>
-
+          <ion-content>
+            <ion-item>
+              <ion-button color="success">Success</ion-button>
+              <ion-button color="warning">Warning</ion-button>
+            </ion-item>
+          </ion-content>
         </ion-card>
       </ion-col>
     </ion-row>

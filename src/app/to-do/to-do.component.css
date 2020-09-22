@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
 }
-
+.prio{
+  color: red;
+}
 ion-col:not(:last-of-type) .speaker-card {
   margin-bottom: 0;
 }
