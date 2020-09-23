@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>To do list</ion-title>
   </ion-toolbar>
@@ -15,7 +15,7 @@
   </ion-header>
 
   <ion-grid fixed>
-    <form>
+    <form [formGroup]="contactForm" (submit)="onSubmit()">
       <ion-item lines="full">
         <ion-label position="floating">Content</ion-label>
         <ion-input type="text" required></ion-input>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import { TodosService } from '../todos.service';
+import { FormGroup, FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-to-do',
@@ -7,11 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./to-do.component.css']
 })
 export class ToDoComponent implements OnInit {
-
-  constructor() { }
+  public contactForm: FormGroup;
+  constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.contactForm = this._formBuilder.group({
+      id: 5,
+      content: "",
+      status: "",
+      priority: "",
+    });
   }
+  
 
   todo =[
     { content:"Web App", status:"Completed", priority:"High" },
