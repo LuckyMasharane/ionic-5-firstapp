@@ -15,7 +15,7 @@
   </ion-header>
 
   <ion-grid fixed>
-    <form [formGroup]="contactForm" (submit)="onSubmit()">
+    <form >
       <ion-item lines="full">
         <ion-label position="floating">Content</ion-label>
         <ion-input type="text" required></ion-input>
@@ -28,7 +28,7 @@
         <ion-label position="floating">Priority</ion-label>
         <ion-input type="text" required></ion-input>
       </ion-item>
-      <ion-button color="primary"><ion-icon name="add"></ion-icon></ion-button>
+      <ion-button color="primary" type="submit"><ion-icon name="add"></ion-icon></ion-button>
     </form>
     <ion-row>
       <ion-col size="6" size-md="6" *ngFor="let todo of todo">
@@ -41,7 +41,7 @@
               </ion-label>
                <ion-item>
               <ion-button color="primary"><ion-icon name="create"></ion-icon></ion-button>
-              <ion-button color="danger"><ion-icon name="trash"></ion-icon></ion-button>
+              <ion-button color="danger" (click)="deleteContent(i)"><ion-icon name="trash"></ion-icon></ion-button>
             </ion-item>
           </ion-card-header>
         </ion-card>
