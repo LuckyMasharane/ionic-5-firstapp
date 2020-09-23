@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TodosService } from '../todos.service';
+// import { TodosService } from '../todos.service';
 
 @Component({
   selector: 'app-to-do',
@@ -8,7 +8,7 @@ import { TodosService } from '../todos.service';
 })
 export class ToDoComponent implements OnInit {
 
-  constructor(private _todosService: TodosService) { }
+  constructor() { }
 
   ngOnInit() {
   }
@@ -20,9 +20,9 @@ export class ToDoComponent implements OnInit {
     { content:"Video Ad", status:"Not Complete", priority:"Low" }
   ]
 
-  getTodolist(){
-    return this._todosService.getAllTodoList();
-  }
+  // getTodolist(){
+  //   return this._todosService.getAllTodoList();
+  // }
 
   
 
