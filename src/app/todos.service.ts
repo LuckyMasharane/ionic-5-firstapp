@@ -24,13 +24,13 @@ export class TodosService {
       priority: todo.priority,
     });
   }
-  updateEmployee(todo: Todolist) {
+  updateTodo(todo: Todolist) {
     const index = this.todo_list.findIndex(c => c.id === todo.id);
     if ( index  >-1) {
       this.todo_list[index] = todo;
     }
   }
-  deleteEmployee(id: number) {
+  deleteTodo(id: number) {
     const tdo = this.todo_list.findIndex(c => c.id == id);
     if (tdo >-1) {
       this.todo_list.splice(tdo,1);
